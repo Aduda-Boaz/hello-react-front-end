@@ -1,13 +1,26 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
-const Greeting = () => {
-  const greeting = useSelector((state) => state.greeting);
+function Greeting(props) {
   return (
-    <h2>
-      Greeting: { greeting }
-    </h2>
+    <div>
+      <h1>Receive greetings from the API</h1>
+      {props.greetings.map((greeting) => {
+        return (
+          <div key={greeting.id}>
+            <h2>{greeting.message}</h2>
+          </div>
+        );
+      })}
+    </div>
   );
+}
+
+Greeting.propTypes = {
+  greetings: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    message: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 export default Greeting;
