@@ -61,7 +61,7 @@ After you're finished please remove all the comments and instructions!
 
 > Describe your project in 1 or 2 sentences.
 
-Hello Rails Back-end Api is an app holding the data in a database and enables an API to be consumed by the front-end app.
+Hello React Front end is an app that displays the data from the database enabled API. It utilizes the date from the Rails back-end API endpoints.
 
 ## 🛠 Built With <a name="built-with"></a>
 
